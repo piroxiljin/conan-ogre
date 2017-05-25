@@ -53,7 +53,7 @@ class OgreConan(ConanFile):
 
     def requirements(self):
         if self.options.with_boost:
-            if self.settings.compiler != "Visual Studio":
+            if self.settings.os == "Linux":
                 self.options["Boost"].fPIC = True
             self.requires("Boost/1.60.0@lasote/stable")
         if self.options.with_cg:
