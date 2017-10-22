@@ -116,6 +116,13 @@ class OgreConan(ConanFile):
             'OgreTerrain'
         ]
 
+        if self.settings.os == 'Windows':
+            self.cpp_info.libs += [
+                'RenderSystem_Direct3D9',
+                'RenderSystem_Direct3D11',
+                'RenderSystem_GL'
+            ]
+
         is_apple = (self.settings.os == 'Macos' or self.settings.os == 'iOS')
         if self.settings.build_type == "Debug" and not is_apple:
             self.cpp_info.libs = [lib+'_d' for lib in self.cpp_info.libs]
