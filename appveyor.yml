@@ -4,10 +4,9 @@ environment:
     PYTHON_VERSION: "2.7.8"
     PYTHON_ARCH: "32"
     
-    CONAN_UPLOAD: 1
     CONAN_REFERENCE: "OGRE/1.9.0"
-    CONAN_USERNAME: "hilborn"
-    CONAN_CHANNEL: "stable"
+    CONAN_USERNAME: "piroxiljin"
+    CONAN_CHANNEL: "testing"
     CONAN_TOTAL_PAGES: 24
     
     matrix:
